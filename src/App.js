@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+import HelloWorld from './HelloWorld';
+import Greet from './Greet';
+import WordCounter from './WordCounter';
+import Async from './Async';
+import Async2 from './Async2';
+import ConditionalComponent from './ConditionalComponent';
 
+// https://reactjs.org/docs/introducing-jsx.html
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* components can either have opening and closing tags */}
+      <HelloWorld></HelloWorld>
+      <hr />
+      {/* or they can be self closing */}
+      <HelloWorld />
+      <hr />
+      <Greet name="Jane" />
+      <hr />
+      <WordCounter />
+      <hr />
+      <Router>
+      <Link to="/">go to route home</Link>
+        <Link to="/foo/1">go to route foo/1</Link>
+        <p>You can also change the url manually to foo/2 and see it change...</p>
+        <div style={{background: '#ddd', padding: '20px'}}>
+          <Route path="/foo/:id" component={Async2}></Route>
+        </div>
+      </Router>
+
+      <ConditionalComponent />
+
+      <Async />
     </div>
   );
 }
