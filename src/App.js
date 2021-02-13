@@ -10,11 +10,13 @@ import WordCounter from './WordCounter';
 import Async from './Async';
 import Async2 from './Async2';
 import ConditionalComponent from './ConditionalComponent';
+// import Hangman from './Hangman';
 
 // https://reactjs.org/docs/introducing-jsx.html
 function App() {
   return (
     <div>
+      {/* <Hangman /> */}
       {/* components can either have opening and closing tags */}
       <HelloWorld></HelloWorld>
       <hr />

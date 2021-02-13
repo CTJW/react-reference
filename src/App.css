@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+}
+
+.dash {
+  border-bottom: 1px solid #000;
+  width: 100px;
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+  background: #0f8888;
+  color: #fff;
+  border: none;
+  outline: none;
+}
