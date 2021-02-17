@@ -8,4 +8,4 @@ import App from './App';
 
 // More can be read here
 // https://reactjs.org/docs/rendering-elements.html
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.querySelector('#root'));

@@ -4,27 +4,32 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import React from 'react'
 import HelloWorld from './HelloWorld';
 import Greet from './Greet';
 import WordCounter from './WordCounter';
 import Async from './Async';
 import Async2 from './Async2';
 import ConditionalComponent from './ConditionalComponent';
+import ContextExample from './ContextExample';
+import ContextState from './ContextState';
 // import Hangman from './Hangman';
 
 // https://reactjs.org/docs/introducing-jsx.html
 function App() {
   return (
     <div>
-      {/* <Hangman /> */}
-      {/* components can either have opening and closing tags */}
-      <HelloWorld></HelloWorld>
+      {/* <hr />
+    
+      <p className="foo">I am some text</p>
+      <HelloWorld myCoolArray={[1,2,3]}></HelloWorld>
+      <div></div>
       <hr />
-      {/* or they can be self closing */}
-      <HelloWorld />
       <hr />
       <Greet name="Jane" />
       <hr />
+      <WordCounter />
+      <WordCounter />
       <WordCounter />
       <hr />
       <Router>
@@ -38,7 +43,9 @@ function App() {
 
       <ConditionalComponent />
 
-      <Async />
+      <Async /> */}
+      <ContextExample></ContextExample>
+      <ContextState></ContextState>
     </div>
   );
 }

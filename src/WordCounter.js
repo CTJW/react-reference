@@ -7,14 +7,15 @@ import { useState, useEffect } from 'react'
 // https://reactjs.org/docs/hooks-effect.html
 
 export default function WordCounter() {
-    const [text, setText] = useState('');
+    const [text, setText] = useState('hello there!');
     const [wordCount, setWordCount] = useState(0);
     useEffect(() => {
+        console.log('text is the value', text)
         const count = text ? text.trim('').split(' ').length : 0
         setWordCount(count)
     }, [text])
     return <div>
         <p>there are {wordCount} words</p>
-        <textarea onChange={(e) => setText(e.target.value)}></textarea>
+        <textarea onChange={(e) => setText(e.target.value)} value={text}></textarea>
     </div>
 }

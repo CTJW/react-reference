@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
-export default function Async(props) {
+export default function Async2(props) {
   const [item, setItem] = useState({});
   // react router provides the props here
+  console.log(props)
   const id = props.match.params.id;
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos/" + id)
