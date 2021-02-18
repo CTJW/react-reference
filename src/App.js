@@ -16,14 +16,16 @@ import ConditionalComponent from './ConditionalComponent';
 import ContextExample from './ContextExample';
 import ContextState from './ContextState';
 import MyComponent from './MyComponent';
+import TodoApp from './todo/TodoApp'
 // import Hangman from './Hangman';
 
 // https://reactjs.org/docs/introducing-jsx.html
 function App() {
   return (
     <div>
+      <TodoApp></TodoApp>
       {/* <Button></Button> */}
-      <Clicky></Clicky>
+      {/* <Clicky></Clicky> */}
       {/* <hr />
     
       <p className="foo">I am some text</p>
@@ -49,8 +51,8 @@ function App() {
       <ConditionalComponent />
 
       <Async /> */}
-      <ContextExample></ContextExample>
-      <ContextState></ContextState>
+      {/* <ContextExample></ContextExample> */}
+      {/* <ContextState></ContextState> */}
     </div>
   );
 }
