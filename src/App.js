@@ -5,6 +5,8 @@ import {
   Link
 } from 'react-router-dom';
 import React from 'react'
+import Button from './Button';
+import Clicky from './Clicky';
 import HelloWorld from './HelloWorld';
 import Greet from './Greet';
 import WordCounter from './WordCounter';
@@ -13,12 +15,15 @@ import Async2 from './Async2';
 import ConditionalComponent from './ConditionalComponent';
 import ContextExample from './ContextExample';
 import ContextState from './ContextState';
+import MyComponent from './MyComponent';
 // import Hangman from './Hangman';
 
 // https://reactjs.org/docs/introducing-jsx.html
 function App() {
   return (
     <div>
+      {/* <Button></Button> */}
+      <Clicky></Clicky>
       {/* <hr />
     
       <p className="foo">I am some text</p>

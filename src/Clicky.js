@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // This button component has it's own state
 // https://reactjs.org/docs/hooks-state.html
-export default function Button() {
+export default function Clicky() {
     // useState takes an initial state (here it is 0)
     // the function returns an array with two things.
     // [initialStateVariable, functionToChangeVariable]
@@ -19,5 +19,17 @@ export default function Button() {
         ////////
         setCount(count + 1)
     }
-    return <button onClick={handleCount}>{count}</button>
+    function whyAreWeDoingThis(v) {
+        alert('this is dumb: ' + v)
+    }
+    function myConfusingFunction(v) {
+        whyAreWeDoingThis(v)
+    }
+    const handleCount2 = () => setCount(count + 1)
+    const handleCount3 = (v) => setCount(v)
+    const btn = <button onClick={handleCount}>{count}</button>
+    const btn2  = <button onClick={handleCount2}>{count}</button>
+    const btn3  = <button onClick={() => handleCount3(count + 1)}>{count}</button>
+    const btn4 = <button onClick={() => myConfusingFunction(1)}>{count}</button>
+    return btn4
 }
